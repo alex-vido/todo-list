@@ -1,8 +1,41 @@
 body {
-  background-color: green;
+  background-color: darkcyan;
+  padding: 2rem;
 }
-.list {
+
+#list {
+  align-items: center;
   border-radius: 1rem;
   background-color: white;
   padding: 1rem;
+  max-width: 80%;
+}
+
+button {
+  padding: 0.5rem 0.8rem;
+  border: 1px solid;
+  border-radius: 10px;
+  margin-right: 8px;
+  color: white;
+}
+
+#criar-tarefa {
+  background-color: cornflowerblue;
+}
+
+#apaga-tudo {
+  background-color: chocolate;
+}
+
+#remover-finalizados {
+  background-color: red;
+
+}
+
+#salvar-tarefas {
+  background-color: darkseagreen;
+}
+
+#texto-tarefa:focus{
+  border: 1px solid white;
 }
