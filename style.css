@@ -1,0 +1,8 @@
+body {
+  background-color: green;
+}
+.list {
+  border-radius: 1rem;
+  background-color: white;
+  padding: 1rem;
+}

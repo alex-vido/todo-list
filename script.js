@@ -48,5 +48,18 @@
     }
   }
 
+  const btnSalvarTarefas = document.getElementById('salvar-tarefas');
+
+  const salvarLista = () => {
+    const actualList = ol.innerHTML;
+    localStorage.setItem('list', JSON.stringify(actualList));
+  }
+
+  btnSalvarTarefas.addEventListener('click', salvarLista);
+
   btnRemoveCompleted.addEventListener('click', remove);
 
+  const listaSalva = JSON.parse(localStorage.getItem('list'));
+  if (listaSalva) {
+      ol.innerHTML = listaSalva;
+  }
