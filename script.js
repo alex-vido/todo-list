@@ -2,8 +2,12 @@
   const ol = document.getElementById('lista-tarefas');
   const btn = document.getElementById('criar-tarefa');
   const input = document.getElementById('texto-tarefa');
+  const lis = document.getElementsByTagName('li');
 
   const changeColor = (e) => {
+    for (li of lis) {
+      li.style.backgroundColor = 'white';
+    }
     e.target.style.backgroundColor = 'gray';
   }
 
