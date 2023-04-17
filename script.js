@@ -1,8 +1,9 @@
   const body = document.querySelector('body');
   const ol = document.getElementById('lista-tarefas');
-  const btn = document.getElementById('criar-tarefa');
+  const btnAdd = document.getElementById('criar-tarefa');
   const input = document.getElementById('texto-tarefa');
   const lis = document.getElementsByTagName('li');
+  const btnRemove = document.getElementById('apaga-tudo')
 
   const changeColor = (e) => {
     for (li of lis) {
@@ -30,5 +31,13 @@
     input.value = '';
   }
 
-  btn.addEventListener('click', addList);
+  const cleanList = () => {
+    const lisOriginal = [...lis]
+    for (li of lisOriginal) {
+      ol.removeChild(li)
+    }
+  }
+
+  btnAdd.addEventListener('click', addList);
+  btnRemove.addEventListener('click', cleanList);
 
