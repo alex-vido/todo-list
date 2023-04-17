@@ -11,10 +11,21 @@
     e.target.style.backgroundColor = 'gray';
   }
 
+  const scratch = (e) => {
+    if (e.target.classList.contains('completed')) {
+      e.target.classList.remove('completed')
+      e.target.style.textDecoration = 'none';
+    } else {
+      e.target.style.textDecoration = 'line-through solid rgb(0, 0, 0)'
+      e.target.classList.add('completed')
+    }
+  }
+
   const addList = () => {
     const li = document.createElement('li');
     li.innerText = input.value;
     li.addEventListener('click', changeColor);
+    li.addEventListener('dblclick', scratch)
     ol.appendChild(li)
     input.value = '';
   }
